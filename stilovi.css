@@ -8,10 +8,9 @@ body {
     padding-top: 70px;
 }
 
-/* --- NOVA BOJA ZA TEXT --- */
 .gaminator-plava {
-    color: #00d4ff !important; /* Svetlo plava / Cyan */
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); /* Blagi sjaj */
+    color: #00d4ff !important;
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
 }
 
 .slot-vocka {
