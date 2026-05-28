@@ -48,3 +48,15 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.slider-img {
+    aspect-ratio: 21/9; 
+    object-fit: cover;   
+    max-height: 450px;  
+}
+
+@media (max-width: 768px) {
+    .slider-img {
+        aspect-ratio: 4/3;
+    }
+}
