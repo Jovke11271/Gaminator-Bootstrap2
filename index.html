@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="sr">
 <head>
     <meta charset="UTF-8">
@@ -5,60 +6,156 @@
     <title>Gaminator - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stilovi.css">
-    <style>
-        /* Stil za početni ekran koji prekriva sve */
-        #pocetniEkran {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 10000; background: rgba(0,0,0,0.9);
-            display: flex; align-items: center; justify-content: center;
-        }
-    </style>
 </head>
 <body>
 
-<div id="pocetniEkran">
-    <div class="text-center p-5 bg-dark border border-warning rounded-4 shadow-lg">
-        <h1 class="text-white display-3 fw-bold mb-4 gaminator-plava">GAMINATOR</h1>
-        <p class="text-light mb-4">Spremni za igru? Pokupite svoje dnevne tokene!</p>
-        <button class="btn btn-warning btn-lg px-5 py-3 fw-bold" onclick="pokupiITreniraj()">POKUPI I KRENI</button>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold gaminator-plava" href="index.html">GAMINATOR</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Početna</a></li>
+        <li class="nav-item"><a class="nav-link" href="igre.html">Igre</a></li>
+        <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+        <li class="nav-item"><a class="nav-link" href="podesavanja.html">Podešavanja</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <span class="navbar-text text-success fw-bold fs-5">
+        <img src="slike/koin.png" width="20" alt="coin"> 3500
+      </span>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 text-center">
+    <div class="alert alert-info alert-dismissible fade show bg-dark text-info border-info" role="alert">
+        <strong>Ново у понуди!</strong> Испробајте најновије слот игре са дуплим бонусима ове недеље.
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 </div>
 
-<div id="glavniSadrzaj" style="display: none;">
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold gaminator-plava" href="index.html">GAMINATOR</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
+<div class="container my-5">
+    <div id="gaminatorCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="5"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="6"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="7"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="8"></button>
+            <button type="button" data-bs-target="#gaminatorCarousel" data-bs-slide-to="9"></button>
+        </div>
+
+        <div class="carousel-inner rounded-4 border border-secondary">
+            
+            <div class="carousel-item active">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider1-sm.jpg">
+                    <img src="slike/slider1-lg.jpg" class="d-block w-100 slider-img" alt="Igra 1">
+                </picture>
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
+                    <h5>Alter Ego</h5>
+                    <p>Закорачите у свет мистерије и великих добитака.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider2-sm.jpg">
+                    <img src="slike/slider2-lg.jpg" class="d-block w-100 slider-img" alt="Igra 2">
+                </picture>
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
+                    <h5>Book of Ra</h5>
+                    <p>Истражите тајне древних фараона.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider3-sm.jpg">
+                    <img src="slike/slider3-lg.jpg" class="d-block w-100 slider-img" alt="Igra 3">
+                </picture>
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
+                    <h5>Mighty Stampedo</h5>
+                    <p>Осетите моћ дивљине на риловима.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider4-sm.jpg">
+                    <img src="slike/slider4-lg.jpg" class="d-block w-100 slider-img" alt="Igra 4">
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider5-sm.jpg">
+                    <img src="slike/slider5-lg.jpg" class="d-block w-100 slider-img" alt="Igra 5">
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider6-sm.jpg">
+                    <img src="slike/slider6-lg.jpg" class="d-block w-100 slider-img" alt="Igra 6">
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider7-sm.jpg">
+                    <img src="slike/slider7-lg.jpg" class="d-block w-100 slider-img" alt="Igra 7">
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider8-sm.jpg">
+                    <img src="slike/slider8-lg.jpg" class="d-block w-100 slider-img" alt="Igra 8">
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider9-sm.jpg">
+                    <img src="slike/slider9-lg.jpg" class="d-block w-100 slider-img" alt="Igra 9">
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="slike/slider10-sm.jpg">
+                    <img src="slike/slider10-lg.jpg" class="d-block w-100 slider-img" alt="Igra 10">
+                </picture>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#gaminatorCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Prethodna</span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Početna</a></li>
-            <li class="nav-item"><a class="nav-link" href="igre.html">Igre</a></li>
-            <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-            <li class="nav-item"><a class="nav-link" href="podesavanja.html">Podešavanja</a></li>
-          </ul>
-          <span class="navbar-text text-success fw-bold fs-5">
-            <img src="slike/koin.png" width="20" height="20" alt="coin"> 3500
-          </span>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container d-flex align-items-center justify-content-center" style="min-height: 80vh;">
-        <div class="text-center p-5 bg-dark bg-opacity-75 rounded-4 border border-secondary shadow-lg">
-            <h1 class="text-white fw-bold mb-4">DOBRODOŠLI NAZAD</h1>
-            <a href="igre.html" class="btn btn-warning btn-lg px-5 fw-bold">LISTA IGARA</a>
-        </div>
+        <button class="carousel-control-next" type="button" data-bs-target="#gaminatorCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sledeća</span>
+        </button>
     </div>
 </div>
 
-<script>
-    function pokupiITreniraj() {
-        document.getElementById('pocetniEkran').style.display = 'none';
-        document.getElementById('glavniSadrzaj').style.display = 'block';
-    }
-</script>
+<div class="container d-flex align-items-center justify-content-center my-5">
+    <div class="text-center p-5 bg-dark bg-opacity-75 rounded-4 border border-secondary shadow-lg">
+        <h1 class="text-white fw-bold mb-4">DOBRODOŠLI</h1>
+        <a href="igre.html" class="btn btn-warning btn-lg px-5 fw-bold">KRENI SA IGROM</a>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
